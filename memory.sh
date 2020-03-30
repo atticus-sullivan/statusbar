@@ -1,3 +1,3 @@
 #!/bin/sh
 
-free -h --si | awk '/^Mem:/ {printf "%.2d" $7}'
+free -h --si | awk '/^Mem:/ {printf " %3s\n", $7}'
