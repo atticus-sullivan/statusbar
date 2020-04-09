@@ -35,7 +35,7 @@ do
 		else
 			icon=""
 			col="^b#ff0000^^c#FFFFFF^"
-			notify-send "Battery" "Battery state is critical"
+			notify-send -h string:x-canonical-private-synchronous:battery "Battery" "Battery state is critical"
 		fi
 	elif [ "$status" = "Charging" ]
 	then
@@ -52,6 +52,9 @@ do
 		hour="00"
 		min="00"
 	fi
+
+	#ncol=""
+	#col=""
 
 	printf "%s%s %.2d%% %.2d:%.2d%s\n" "$col" "$icon" "$capacity" "$hour" "$min" "$ncol"
 done
