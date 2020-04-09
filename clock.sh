@@ -1,3 +1,3 @@
 #!/bin/sh
 
-printf " $(date '+%d.%m %H:%M:%S')           "
+printf " $(date '+%d.%m %H:%M:%S')           \n"
