@@ -8,8 +8,8 @@
 # Author: Lukas, fork of LukeSmith's script modified to add notify-send and display remaining time etc.
 # Email: l.untrusted+bashScripts@protonmail.com
 # Copyright 2020 Lukas
-# License: GPL3
-# see more information on: https://www.gnu.org/licenses/gpl-3.0.en.html or in the license file of the git repo
+# License: BSD-3
+# see more information in the license file of the git repo
 
 #prefixes: B,C,D,K,M,N,S,U,V,s,b
 #prefixes taken by bspwm: T,W
