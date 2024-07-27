@@ -1,7 +1,8 @@
 # statusbar
 
-Some bash scripts to populate the statusbar created by [`lemonbar` (xft fork)](https://github.com/freundTech/bar).
+Some modules to populate the statusbar created by [`lemonbar` (xft fork)](https://github.com/freundTech/bar).
+Actually there is one binary which periodically updates the modules (at
+individual frequencies) and one binary to update a single module on demand.
 Part of my bspwm setup.
 
-Note: parts are taken from `vanela-panel` (I have to admit I don't have the link
-to the github and can't find it anymore)
+Note: parts are taken from [`vanela-panel`](https://github.com/addy-dclxvi/void-bspwm-dotfiles/blob/2e783c05073e2dcb2c952c9eeada0519c410528a/home/addy/.scripts/vanela#L4)
