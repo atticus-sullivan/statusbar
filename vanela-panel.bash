@@ -103,9 +103,6 @@ while read -r line ; do
 		m*)
 			mouseBat="${line#?}%{B-}%{F-}"
 			;;
-		b*)
-			bluetooth="${line#?}%{B-}%{F-}"
-			;;
 		B*)
 			bat="${line#?}%{B-}%{F-}"
 			;;
@@ -117,9 +114,6 @@ while read -r line ; do
 			;;
 		D*)
 			disk="${line#?}%{B-}%{F-}"
-			;;
-		K*)
-			key="${line#?}%{B-}%{F-}"
 			;;
 		S*)
 			signal="${line#?}%{B-}%{F-}"
@@ -232,7 +226,7 @@ while read -r line ; do
 			;;
 	esac
 	#printf "%s\n" "%{l}${wm}%{O10}${title} %{r} ${signal} ${netspeed}| ${key}| ${disk}| ${vol}| ${mem}| ${cpu}| ${bat}| ${time}     "
-	printf "%s\n" "%{l}${wm} ${sxhkd} %{O10}${title} %{r} |${dmenu_run}|${flameshot}|${bluetooth}| ${signal} ${netspeed}|${key}|${disk}|${vol}|${mem}|${cpu}|${bat}|${mouseBat}|${time}"
+	printf "%s\n" "%{l}${wm} ${sxhkd} %{O10}${title} %{r} |${dmenu_run}|${flameshot}| ${signal} ${netspeed}|${disk}|${vol}|${mem}|${cpu}|${bat}|${mouseBat}|${time}"
 done
 }
 
