@@ -83,13 +83,13 @@ COLOR_SYS_BG="$RED"
 mkfifo "$PANEL_FIFO"
 
 # Just to make sure there is no double process
-killall -9 lemonbar xtitle xdo statusbar-update
+killall -9 lemonbar xtitle xdo statusbar-all
 
 dmenu_run="%{A:dmenu-launcher:}  %{A}"
 flameshot="%{A:flameshot gui:}  %{A}"
 
 # Echo every modules to PANEL_FIFO
-statusbar-update start >> "${PANEL_FIFO}" &
+statusbar-all "${PANEL_FIFO}" &
 
 xtitle -t 60 -sf 'T%s\n' > "$PANEL_FIFO" &
 bspc subscribe report > "$PANEL_FIFO" &
