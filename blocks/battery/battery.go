@@ -4,10 +4,12 @@ import (
 	"context"
 	"fmt"
 	"io"
+	"strings"
 	"time"
 
-	"github.com/distatus/battery"
 	"statusbar/blocks"
+
+	"github.com/distatus/battery"
 )
 
 var (
@@ -67,7 +69,7 @@ func BatteryOnce(f io.Writer) error {
 			icon = ICON_00
 			color="%{B#ff0000}"
 		}
-		fmt.Fprintf(f, "%[1]c%[4]s %[2]c%.0[3]f%% %[5]s \n", prefix, icon, capacity, color, duration.Truncate(time.Minute))
+		fmt.Fprintf(f, "%[1]c%[4]s %[2]c%.0[3]f%% %[5]s \n", prefix, icon, capacity, color, strings.TrimSuffix(duration.Truncate(time.Minute).String(), "0s"))
 		return nil
 
 	case battery.Full:
@@ -75,7 +77,7 @@ func BatteryOnce(f io.Writer) error {
 	case battery.Empty:
 		icon = ICON_00
 	case battery.Idle:
-		icon = ICON_100
+		icon = ICON_FULL
 	case battery.Unknown:
 		icon = ICON_DK
 	}

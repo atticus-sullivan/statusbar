@@ -23,10 +23,10 @@ func getNetworkInterface() (string, error) {
 	}
 
 	for _, iface := range interfaces {
-		if wireless == "" && strings.HasPrefix(iface.Name, "wlp") && iface.Flags & net.FlagUp != 0 {
+		if wireless == "" && strings.HasPrefix(iface.Name, "wlp") && iface.Flags & net.FlagRunning != 0 {
 			wireless = iface.Name
 		}
-		if wired == "" && strings.HasPrefix(iface.Name, "enp") && iface.Flags & net.FlagUp != 0 {
+		if wired == "" && strings.HasPrefix(iface.Name, "enp") && iface.Flags & net.FlagRunning != 0 {
 			wired = iface.Name
 		}
 	}

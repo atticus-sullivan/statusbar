@@ -226,7 +226,7 @@ while read -r line ; do
 			;;
 	esac
 	#printf "%s\n" "%{l}${wm}%{O10}${title} %{r} ${signal} ${netspeed}| ${key}| ${disk}| ${vol}| ${mem}| ${cpu}| ${bat}| ${time}     "
-	printf "%s\n" "%{l}${wm} ${sxhkd} %{O10}${title} %{r} |${dmenu_run}|${flameshot}| ${signal} ${netspeed}|${disk}|${vol}|${mem}|${cpu}|${bat}|${mouseBat}|${time}"
+	printf "%s\n" "%{l}${wm} ${sxhkd} %{O10}${title} %{r} |${dmenu_run}|${flameshot}| ${signal}${netspeed}|${disk}|${vol}|${mem}|${cpu}|${bat}|${mouseBat}|${time}"
 done
 }
 

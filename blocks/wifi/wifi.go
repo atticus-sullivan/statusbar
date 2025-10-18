@@ -27,7 +27,7 @@ func WifiOnce(f io.Writer) error {
 	if err != nil {
 		return err
 	}
-	fmt.Fprintf(f, "%[1]c%[2]s%[4]c%03.0[5]f%[3]s\n", prefix, "%{A:/media/daten/scripts/networkmanager-dmenu.bash:}", "%{A}", icon, signalStrength)
+	fmt.Fprintf(f, "%[1]c%[2]s%[4]c%02.0[5]f%% %[3]s\n", prefix, "%{A:/media/daten/scripts/networkmanager-dmenu.bash:}", "%{A}", icon, signalStrength)
 
 	return nil
 }

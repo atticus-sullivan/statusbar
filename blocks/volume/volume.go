@@ -51,6 +51,8 @@ func VolumeOnce(f io.Writer) error {
 		fmt.Fprintf(f, "%[1]c%[2]s %[4]c %[5]d%% %[3]s\n", prefix, "%{A:amixer set Master toggle; statusbar-update volume:}", "%{A}", icon, v.VolumeL)
 	} else if !v.Left && v.Right {
 		fmt.Fprintf(f, "%[1]c%[2]s %[4]c %[5]d%% %[3]s\n", prefix, "%{A:amixer set Master toggle; statusbar-update volume:}", "%{A}", icon, v.VolumeR)
+	} else if v.Mono {
+		fmt.Fprintf(f, "%[1]c%[2]s %[4]c %[5]d%%M %[3]s\n", prefix, "%{A:amixer set Master toggle; statusbar-update volume:}", "%{A}", icon, v.VolumeM)
 	} else {
 		fmt.Fprintf(f, "%[1]c%[2]s %[4]c %[5]d%% %[3]s\n", prefix, "%{A:amixer set Master toggle; statusbar-update volume:}", "%{A}", icon, 0)
 	}
@@ -129,6 +131,9 @@ func parseAmixerOutput(output []byte) (VolumeStatus, error) {
 		case "Front Right":
 			vs.VolumeR = vol
 			vs.Right = true
+		case "Mono":
+			vs.VolumeM = vol
+			vs.Mono = true
 		default:
 			os.Stderr.WriteString("invalid position\n")
 		}
