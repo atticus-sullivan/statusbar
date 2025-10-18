@@ -1,6 +1,6 @@
 # statusbar
 
-Some modules to populate the statusbar created by [`lemonbar` (xft fork)](https://github.com/freundTech/bar).
+Some modules to populate the statusbar created by [`lemonbar` (xft fork)](https://gitlab.com/protesilaos/lemonbar-xft).
 Actually there is one binary which periodically updates the modules (at
 individual frequencies) and one binary to update a single module on demand.
 Part of my bspwm setup.
