@@ -7,8 +7,8 @@ arch=('x86_64')
 url="https://github.com/atticus-sullivan/statusbar"
 license=('MIT')
 makedepends=('git' 'go')
-depends=('bash' 'lemonbar' 'xdo' 'bspwm' 'xtitle' 'flameshot')
-optdepends=('dmenu: can also be installed manually')
+depends=('bash' 'xdo' 'bspwm' 'xtitle' 'flameshot')
+optdepends=('dmenu: can also be installed manually', 'lemonbar: maybe you built your own one')
 source=("statusbar-${pkgver}.tar.gz::${url}/archive/refs/tags/${pkgver}.tar.gz")
 sha256sums=('SKIP')
 
