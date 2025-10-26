@@ -1,6 +1,6 @@
-# Maintainer: Your Name <your.email@example.com>
+# Maintainer: Lukas Heindl <oss.heindl@protonmail.com>
 pkgname=vanela-panel
-pkgver=1.0.0
+pkgver=1.0.1
 pkgrel=1
 pkgdesc="A simple modular statusbar for bspwm"
 arch=('x86_64')
@@ -36,5 +36,6 @@ package() {
 	cd "statusbar-$pkgver"
 	install -Dm755 build/all    "$pkgdir"/usr/local/bin/statusbar-all
 	install -Dm755 build/single "$pkgdir"/usr/local/bin/statusbar-single
+	install -Dm755 "cal.bash"          "$pkgdir/usr/local/bin/vanela-cal"
 	install -Dm755 "vanela-panel.bash" "$pkgdir/usr/local/bin/vanela-panel"
 }
