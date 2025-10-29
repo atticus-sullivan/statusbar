@@ -1,0 +1,7 @@
+*.stat
+statusbar-all
+statusbar-single
+*.pkg.tar.zst
+*.tar.gz
+/pkg-*/*
+!/pkg-*/PKGBUILD
